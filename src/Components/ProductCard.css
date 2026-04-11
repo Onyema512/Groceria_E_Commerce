@@ -1,0 +1,21 @@
+.card_Body {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.card_Image{
+    /* background-color: aqua; */
+    height: 300px;
+}
+.card_Body img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

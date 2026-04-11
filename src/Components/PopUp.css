@@ -1,0 +1,28 @@
+.PopBody {
+  width: 100%;
+  height: 100vh;
+  background: #00000097;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.Popcard {
+  width: 40%;
+  height: 70%;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+.Popcard1 {
+  width: 40%;
+  height: 70%;
+  background: red;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
