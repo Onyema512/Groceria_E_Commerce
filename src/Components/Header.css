@@ -1,8 +1,3 @@
-/* *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
 .main_Header{
     width: 100%;
     height: 15vh;
@@ -19,8 +14,8 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: center; 
+    gap: 30px; 
     /* background-color: lightgray; */
 }
 .left_Header{
@@ -40,7 +35,7 @@
     gap: 20px;
     align-items: center;
     /* background-color: bisque; */
-    width: 40px;
+   width: auto;
     height: 100%;
 }
 .home{
@@ -130,4 +125,60 @@
   align-items: center;
   justify-content: center;
   transition: 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .main_Header{
+        width: 100%;
+    }
+
+  .sub_Header {
+    width: 90%;
+    justify-content: space-between;
+    gap: 10px; 
+  }
+
+  .middle_Header {
+    width: 40%; 
+    justify-content: center; 
+    gap: 15px;
+  }
+
+  .middle_Buttons {
+    gap: 10px;
+  }
+
+  .middle_Input {
+    width: 100%;
+    max-width: 220px; 
+  }
+
+  .food {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .search {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .right_Header {
+    gap: 10px;
+  }
+
+  .home,
+  .register,
+  .login {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .store {
+    display: none;
+  }
+
+  .left_Header {
+    font-size: 16px;
+  }
 }

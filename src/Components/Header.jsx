@@ -20,7 +20,7 @@ const Header = () => {
                 <input type="text" placeholder='Search for food items' className='food' />
                <Button onClick={() => navigate("/")} name="Search" className="search"/>
             </div>
-        </div>
+         </div>
         <div className='right_Header'>
             <Button onClick={() => navigate("/signup")} name="Register" className="register"/>
             <Button onClick={() => navigate("/login")} name="Login" className="login"/>

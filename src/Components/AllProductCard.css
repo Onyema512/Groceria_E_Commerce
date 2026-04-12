@@ -5,3 +5,13 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
+@media (max-width: 1024px) {
+
+  .general_Container {
+    width: 100%;
+    margin: 30px auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+}
