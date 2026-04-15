@@ -83,7 +83,7 @@
     background-color: white;
 }
 .search{
-       padding: 10px 10px;
+       padding: 16px 20px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: 1px solid lightgray;
@@ -99,6 +99,9 @@
 .right_Header{
     display: flex;
     gap: 20px;
+    width: 30%;
+    /* background-color: aqua; */
+    /* justify-content: space-between; */
 }
 .register{
          padding: 16px 30px;

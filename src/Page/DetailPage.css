@@ -8,7 +8,7 @@
 .detail_Main {
     width: 100%;
     height: 100%;
-    display: flex;   /* 🔥 THIS IS THE KEY */
+    display: flex; 
     justify-content: space-between;
 }
 .left_Store{

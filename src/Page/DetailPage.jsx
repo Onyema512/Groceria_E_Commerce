@@ -5,8 +5,10 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../Components/Header';
+import { useNavigate } from 'react-router-dom';
 
 const DetailPage = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -75,7 +77,7 @@ const DetailPage = () => {
                 <option value="four">04</option>
                 <option value="five">05</option>
               </select>
-                <Button name="ADD TO CART" className="cart"/>
+                <Button onClick={() => navigate("/cart")} name="ADD TO CART" className="cart"/>
             </div>
         </div>
         <div className='rightDown_Store'>

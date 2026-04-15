@@ -11,6 +11,8 @@ import Stores from './Page/Stores'
 import Header from './Components/Header'
 import Error from './Page/Error'
 import DetailPage from './Page/DetailPage'
+import CartPage from './Page/CartPage'
+import CheckOutPage from './Page/CheckOutPage'
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/stores" element={<Stores />} />
         <Route path="/details/:id" element={<DetailPage/>}/>
+        <Route path="/cart"  element={<CartPage/>}/>
+        <Route path="/check" element={<CheckOutPage/>}/>
       </Routes>
     </BrowserRouter>
     

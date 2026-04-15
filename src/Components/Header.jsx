@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import Button from './Button'
 import { useNavigate } from 'react-router-dom'
+import { IoCartOutline } from "react-icons/io5";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Header = () => {
         <article className='left_Header'>
             <h1>Anthony</h1>
         </article>
-        <div className='middle_Header'>
+         <div className='middle_Header'>
             <div className='middle_Buttons'>
               <Button onClick={() => navigate("/")} name="Home" className="home"/>
                <Button onClick={() => navigate("/stores")} name="Stores" className="store"/>
@@ -22,6 +23,9 @@ const Header = () => {
             </div>
          </div>
         <div className='right_Header'>
+            <div onClick={() => navigate("/cart")}>
+              < IoCartOutline size={50} color="#02B928" cursor="pointer" /> 
+            </div>
             <Button onClick={() => navigate("/signup")} name="Register" className="register"/>
             <Button onClick={() => navigate("/login")} name="Login" className="login"/>
         </div>

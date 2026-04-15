@@ -1,0 +1,129 @@
+.checkout2 {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: whitesmoke;
+}
+
+.left {
+  flex: 2;
+}
+
+.back {
+  color: gray;
+  cursor: pointer;
+}
+
+.left h1 {
+  margin-bottom: 20px;
+}
+
+.section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.section_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.step {
+  background-color: green;
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.payment_options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.payment_options button {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid lightgray;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.payment_options .active {
+  border: 2px solid green;
+}
+
+.place_order {
+  width: 100%;
+  padding: 15px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.right {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.right h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid green;
+  padding-bottom: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.total {
+  color: green;
+  margin-top: 15px;
+}
+
+.secure {
+  margin-top: 15px;
+  font-size: 14px;
+  color: gray;
+}
+
+/* @media (max-width: 768px) {
+  .checkout2 {
+    flex-direction: column;
+  }
+} */
