@@ -8,7 +8,7 @@ const AllProductCard = (props) => {
     <>
     <div className='general_Container'>
       {props.allProducts?.map((product) => (
-        <ProductCard product={product}  />
+        <ProductCard key= {product.id} product={product}  />
       ))}
     </div>
     </>

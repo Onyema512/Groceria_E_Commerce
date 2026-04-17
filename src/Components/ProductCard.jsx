@@ -9,8 +9,8 @@ const ProductCard = ({product}) => {
      console.log(useContext(AppContext))
   return (
     // <div  className='card_Body'>
-     <div className='card_Body' onClick={() => navigate(`/details/${product.id}`)}> 
-      <section className='card_Image'>
+     <div className='card_Body'> 
+      <section className='card_Image'  onClick={() => navigate(`/details/${product.id}`)}>
         <img src={product.images?.[0]} alt={product.title} />
       </section>
       <h2>{product.title}</h2>

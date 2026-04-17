@@ -103,6 +103,23 @@
     /* background-color: aqua; */
     /* justify-content: space-between; */
 }
+.cart_Container{
+  position: relative;
+  display: inline-block;
+}
+.cart_Chart{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(45%, -45%);
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+  line-height: 1;
+}
 .register{
          padding: 16px 30px;
   border-radius: 20px;

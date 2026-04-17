@@ -3,9 +3,12 @@ import './Header.css'
 import Button from './Button'
 import { useNavigate } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
+import { useContext } from 'react';
+import { AppContext } from '../Context/AppContext';
 
 const Header = () => {
   const navigate = useNavigate();
+  const {cart} = useContext(AppContext)
   return (
     <header className='main_Header'>
       <section className='sub_Header'>
@@ -23,8 +26,9 @@ const Header = () => {
             </div>
          </div>
         <div className='right_Header'>
-            <div onClick={() => navigate("/cart")}>
+            <div className='cart_Container' onClick={() => navigate("/cart")}>
               < IoCartOutline size={50} color="#02B928" cursor="pointer" /> 
+              <span className='cart_Chart'>{cart.length}</span>
             </div>
             <Button onClick={() => navigate("/signup")} name="Register" className="register"/>
             <Button onClick={() => navigate("/login")} name="Login" className="login"/>
