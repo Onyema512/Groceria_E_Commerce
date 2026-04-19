@@ -32,13 +32,13 @@ const CartPage = () => {
                     <span>Remove</span>
                  </section>
             </div>
-               <div className='cart_BottomLeft'>
 
+               <div className='cart_BottomLeft'>
             {cart.length === 0 ? (
               <h2>Your cart is empty</h2>
             ) : (
               cart.map((item) => (
-                <div key={item.id}>
+                <div className="cart_Item" key={item.id}>
 
                   <article className='yam_Section'>
                     <div className='yam_Pic'>
@@ -56,14 +56,14 @@ const CartPage = () => {
                   </article>
 
                   <section className='cart_BottomDown'>
-                    
+
                     <article className='btm_Qty'>
                       <div className='qty_Text'>
                         <p>Quantity</p>
                       </div>
 
                       <div className='qty_PlusMinus'>
-                        <div className="minus_Qty">
+                        <div className="minus_Qty"  onClick={() => dispatch({type: "REMOVE_ONE", payload: item.id})}>
                           <LuMinus />
                         </div>
 
@@ -71,7 +71,7 @@ const CartPage = () => {
                           {item.quantity}
                         </div>
 
-                        <div className="plus_Qty">
+                        <div className="plus_Qty"  onClick={() => dispatch({type: "ADD_ONE", payload: item.id})}>
                           +
                         </div>
                       </div>
@@ -94,31 +94,12 @@ const CartPage = () => {
                         </div>
 
                         <div className='remove_Qty'>
-                          <Button 
-                            name="Remove"
-                            className="remove_Btn1"
-                            onClick={() =>
-                              dispatch({
-                                type: "REMOVE_FROM_CART",
-                                payload: item.id
-                              })
-                            }
-                          />
+                          <Button name="Remove" className="remove_Btn1" onClick={() => dispatch({type: "REMOVE_ONE", payload: item.id})}/>
                         </div>
-
                       </section>
 
                       <div className='qty_AmtDown'>
-                        <Button 
-                          name="Remove"
-                          className="remove_Btn2"
-                          onClick={() =>
-                            dispatch({
-                              type: "REMOVE_FROM_CART",
-                              payload: item.id
-                            })
-                          }
-                        />
+                        <Button  name="Remove" className="remove_Btn2" onClick={() => dispatch({type: "REMOVE_FROM_CART", payload: item.id})}/>
                       </div>
                     </div>
 

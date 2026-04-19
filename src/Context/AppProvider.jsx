@@ -10,7 +10,7 @@ const AppProvider = ({children}) => {
             case "ADD_TO_CART":{
               const existingCart = state.findIndex(item => item.id === action.payload.id)
               if (existingCart === -1) {
-                const newItem = {...action.payload, quantity: 1}
+                const newItem = {...action.payload, quantity: 1, cartId: Date.now()}
                 return [...state, newItem]
               } else{
                 const updatedCart = state[existingCart];
@@ -19,6 +19,25 @@ const AppProvider = ({children}) => {
                 return [...state];
               }
             }
+            case "ADD_ONE": {
+               return state.map(item => {
+               if (item.id === action.payload) {
+               return { ...item, quantity: item.quantity + 1 };
+                }
+                return item;
+                });
+             }
+
+            case "REMOVE_ONE": {
+              return state.map(item => {             
+             if (item.id === action.payload) {
+                 return { ...item, quantity: item.quantity - 1 };
+            }
+                return item;
+          })
+               .filter(item => item.quantity > 0);
+         }
+         
                case "REMOVE_FROM_CART":
                return state.filter(item => item.id !== action.payload);
             default:
