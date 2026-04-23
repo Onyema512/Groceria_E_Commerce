@@ -23,7 +23,7 @@ const CartPage = () => {
           <article className='full_LeftCart'>
             <div className='cart_Topleft'>
                  <article className='cart_Text'>
-                     Your Cart ({cart.length} Item{cart.length !== 1 && "s"})
+                      Your Cart ({cart.length} {cart.length <=1 ? "item" : "items"})
                     </article>
                  <section className='cart_Lists'>
                     <span>Product</span>
@@ -31,14 +31,14 @@ const CartPage = () => {
                     <span>Total</span>
                     <span>Remove</span>
                  </section>
-            </div>
+             </div>
 
-               <div className='cart_BottomLeft'>
-            {cart.length === 0 ? (
-              <h2>Your cart is empty</h2>
-            ) : (
-              cart.map((item) => (
-                <div className="cart_Item" key={item.id}>
+              <div className='cart_BottomLeft'>
+                 {cart.length === 0 ? (
+                  <h2>Your cart is empty</h2>
+                      ) : (
+                    cart.map((item) => (
+                 <div className="cart_Item" key={item.id}>
 
                   <article className='yam_Section'>
                     <div className='yam_Pic'>
@@ -79,16 +79,13 @@ const CartPage = () => {
                       <div className='qty_Btn'>
                         <Button name="Add more items" className="add_More"/>
                       </div>
-                    </article>
-
-                    {/* PRICE */}
-                    <div className='qty_Amt'>
+                     </article>
+                   
+                     <div className='qty_Amt'>
                       <section className='qty_AmtTop'>
-
                         <div className='amt_Number1'>
                           <h3>₦ {item.price}</h3>
                         </div>
-
                         <div className='amt_Number2'>
                           <h3>₦ {item.price * item.quantity}</h3>
                         </div>
@@ -101,17 +98,15 @@ const CartPage = () => {
                       <div className='qty_AmtDown'>
                         <Button  name="Remove" className="remove_Btn2" onClick={() => dispatch({type: "REMOVE_FROM_CART", payload: item.id})}/>
                       </div>
-                    </div>
+                      </div>
 
-                  </section>
-
-                </div>
-              ))
-            )}
-
-          </div>
-        </article>
-         <section className='CRight'>
+                      </section>
+                      </div>
+                        ))
+                           )}
+                     </div>
+               </article>
+                <section className='CRight'>
           <div className='CRightSub'>
             <div className='subPrice'>
               <p>Subtotal:</p>
@@ -127,11 +122,10 @@ const CartPage = () => {
           </div>
           <Button onClick={() => navigate("/check")} name= "Proceed to checkout" className='bbbb'/>
           </div>
-        </section>
+         </section>
         </section>
       
     </div>
   )
 }
-
 export default CartPage
