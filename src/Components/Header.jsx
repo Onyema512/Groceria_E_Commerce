@@ -5,10 +5,13 @@ import { useNavigate } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
 import { useContext } from 'react';
 import { AppContext } from '../Context/AppContext';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
   const navigate = useNavigate();
   const {cart} = useContext(AppContext)
+  const cartItems = useSelector((state) => state.cart);
+
   return (
     <header className='main_Header'>
       <section className='sub_Header'>
@@ -28,7 +31,7 @@ const Header = () => {
         <div className='right_Header'>
             <div className='cart_Container' onClick={() => navigate("/cart")}>
               < IoCartOutline size={50} color="#02B928" cursor="pointer" /> 
-              <span className='cart_Chart'>{cart.length}</span>
+              <span className='cart_Chart'>{cartItems.length}</span>
             </div>
             <Button onClick={() => navigate("/signup")} name="Register" className="register"/>
             <Button onClick={() => navigate("/login")} name="Login" className="login"/>
